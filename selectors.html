@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All CSS Selectors</title>
+  <style>
+    /* 1. Simple Selectors: element name, id, class */
+    h1 {
+      color: navy;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+
+    #unique {
+      border: 2px solid green;
+      padding: 10px;
+    }
+
+    /* 2. Combinator Selectors: relationships */
+    /* Descendant selector */
+    #content p {
+      color: darkgreen;
+    }
+
+    /* Child selector */
+    ul > li {
+      color: darkorange;
+    }
+
+    /* Adjacent sibling selector */
+    h2 + p {
+      font-style: italic;
+    }
+
+    /* General sibling selector */
+    h2 ~ div {
+      border-left: 4px solid red;
+      padding-left: 10px;
+    }
+
+    /* 3. Pseudo-class Selectors */
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    input:focus {
+      border-color: purple;
+    }
+
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* 4. Pseudo-element Selectors */
+    p::first-line {
+      color: blue;
+    }
+
+    p::first-letter {
+      font-size: 200%;
+      font-weight: bold;
+    }
+
+    /* 5. Attribute Selectors */
+    input[type="text"] {
+      background-color: #f0f8ff;
+    }
+
+    a[target="_blank"] {
+      color: teal;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="highlight">CSS Selector Categories</h1>
+
+  <div id="unique">
+    <h2>Combinator Example</h2>
+    <p>This paragraph is inside #unique div.</p>
+    <div>This is a sibling div after h2.</div>
+
+    <ul>
+      <li>First item</li>
+      <li>Second item</li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <p>Descendant selector applies this green color.</p>
+  </div>
+
+  <input type="text" placeholder="Text input (attribute selector)">
+  <input type="password" placeholder="Password input">
+
+  <p>This paragraph uses pseudo-element to style the first letter and line.</p>
+
+  <a href="https://www.bing.com/search?q=google&cvid=3d625d40a7a44cfbbbd1cf498abfedbf&gs_lcrp=EgRlZGdlKgYIABBFGDkyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYPdIBCDc0MTFqMGoxqAIAsAIA&FORM=ANAB01&PC=DCTS" target="_blank">Visit Example (new tab)</a><br>
+  <a href="#">Normal Link</a>
+
+</body>
+</html>
