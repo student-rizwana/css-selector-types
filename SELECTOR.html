@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector Types</title>
+  </head>
+  <body>
+    
+    <style>
+        /* 1. Simple Selectors */
+        h1 {
+            color: darkblue;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        #main-title {
+            text-align: center;
+            font-size: 28px;
+        }
+
+        /* 2. Combinator Selectors */
+        div p { /* descendant selector */
+            color: purple;
+        }
+
+        ul > li { /* child selector */
+            color: green;
+        }
+
+        /* 3. Pseudo-class Selectors */
+        a:hover {
+            color: red;
+        }
+
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        /* 4. Pseudo-element Selectors */
+        p::first-letter {
+            font-size: 30px;
+            color: orange;
+        }
+
+        p::after {
+            content: " 👀";
+        }
+
+        /* 5. Attribute Selectors */
+        input[type="email"] {
+            background-color: #e0f7fa;
+        }
+
+        input[placeholder] {
+            font-style: italic;
+        }
+
+        /* 6. Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 7. Sibling Selectors */
+        h2 + p {
+            color: teal; /* adjacent sibling */
+        }
+
+        h3 ~ p {
+            font-style: italic; /* general sibling */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Selectors -->
+    <h1 id="main-title">CSS Selector Types</h1>
+    <p class="highlight">This paragraph uses a class selector.</p>
+
+    <!-- Combinator Selectors -->
+    <div>
+        <p>This is inside a div — styled using a descendant selector.</p>
+    </div>
+
+    <ul>
+        <li>Direct child item 1</li>
+        <li>Direct child item 2</li>
+    </ul>
+
+    <!-- Pseudo-class -->
+    <a href="#">Hover over me</a><br><br>
+    <input type="text" placeholder="Click me to see focus effect">
+
+    <!-- Attribute Selectors -->
+    <input type="email" placeholder="Email address">
+
+    <!-- Sibling Selectors -->
+    <h2>Heading 2</h2>
+    <p>This paragraph is an adjacent sibling of h2.</p>
+
+    <h3>Heading 3</h3>
+    <p>This paragraph is a general sibling of h3.</p>
+    <p>Another general sibling of h3.</p>
+
+</body>
+</html>
